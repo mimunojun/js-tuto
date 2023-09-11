@@ -61,3 +61,41 @@ const objB = {};
 console.log(objA === objB); // false
 console.log(objA === objA); // true
 ```
+* compared to Equivalence Operator `==`, `==` does *implicit type conversion* which may cause bugs, so using `===` is recommended instead of `==`.
+
+### Nullish Coalescing Operator `??`
+
+* `??` returns right-side evaluation if value of left-side is **nullish**.
+    * **nullish** is a value whose evaluation result is `null` or `undefined`.
+```
+// returns right-side evaluation
+console.log(null ?? "right-side");       // "right-side"
+console.log(undefined ?? "right-side");  // "right-side"
+
+// returns left-side evaluation
+console.log(true ?? "right-side");       // true
+console.log(false ?? "right-side");      // false
+console.log(0 ?? "right-side");          // 0
+console.log("string" ?? "right-side");   // "string"
+```
+
+* `??` often used to set default value.
+    * `||` also can be used, but not recommended because of *implicit type conversion*.
+```
+const inputValue = any value or undefined
+const value = inputValue ?? 42;     // 42 is assigned if only `value` is nullish
+console.log(value);
+```
+
+### Condition Operator `?`, `:`
+
+* if a `<conditional expression>` results `true`, returns `<true-value>`, else, returns `<false-value>`.
+```
+<conditional expression> ? <true-value> : <false-value>;
+
+const valueA = true ? "A" : "B";
+console.log(valueA);        // "A"
+const valueB = false ? "A" : "B";
+console.log(valueB);        // "B"
+```
+
