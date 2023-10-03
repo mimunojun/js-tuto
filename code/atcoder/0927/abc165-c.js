@@ -19,7 +19,38 @@ function getFloat(strArr){
 
 function main() {
     console.log(lines);
-    const [a] = getInt(lines[0]);
-    const [b] = getInt(lines[1]);
-    const [c] = getInt(lines[2]);
+    const [n, m] = getInt(lines[0]);
+    const a = [];
+    const b = [];
+    const c = [];
+    const d = [];
+
+    for (let i=0; i<n; i++) {
+      a.push(getInt(lines[i+1])[0]);
+      b.push(getInt(lines[i+1])[1]);
+    }
+
+    const [k] = getInt(lines[m+1]);
+
+    for (let i=0; i<k; i++) {
+      c.push(getInt(lines[m+i+2])[0]);
+      d.push(getInt(lines[m+i+2])[1]);
+    }
+
+    const plate = new Array(n).fill(false);
+    const selects = new Array(k);
+
+    
+}
+
+function search(k) {
+  if (k===0) {
+    return calcValue();
+  } else {
+
+  }
+}
+
+function calcValue() {
+
 }
