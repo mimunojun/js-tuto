@@ -24,7 +24,7 @@ function main() {
     // console.log(check1(a))
     // console.log(check2(a))
     // console.log(check3(a))
-    console.log('A' < 'a')
+    // console.log('A' < 'a')
     
 }
 
